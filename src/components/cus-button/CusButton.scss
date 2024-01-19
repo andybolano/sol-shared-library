@@ -1,0 +1,38 @@
+.cus-button {
+	color: var(--background);
+	border-radius: var(--border-radius);
+	border: 0;
+	padding: var(--mc-scale-3) var(--mc-scale-6);
+	font-weight: 500;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+	font-size: 1.4rem;
+	font-family: var(--fontFamily);
+
+	i {
+		margin-right: 1rem;
+	}
+	
+
+	&--primary {
+		background-color: var(--primaryColor);
+		color: var(--background);
+		&:hover {
+			background-color: var(--primaryColor);
+		}
+	}
+
+	&--secondary {
+		border: 1px solid var(--primaryColor);
+		background-color: var(--background);
+		color: var(--primaryColor);
+	}
+
+	&--text {
+		background-color: transparent;
+		color: var(--secondaryColor);
+	}
+}
+

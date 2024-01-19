@@ -1,0 +1,29 @@
+.input-container {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    left: 1.2rem;
+    width: 2rem;
+    height: 2rem;
+    top: 50%; 
+    transform: translateY(-50%);
+    color: var(--textColor);
+}
+
+.cus-input {
+    border-radius: var(--border-radius);
+    border: 1px solid #eeeeee;
+    padding: var(--mc-scale-4);
+    color: var(--textColor);
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: var(--fontFamily);
+    width: 100%;
+    max-width: 28rem;
+
+    &--icon {
+        padding-left: 4rem;
+    }
+}

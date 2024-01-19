@@ -1,0 +1,18 @@
+.cus-label {
+	margin-bottom: var(--mc-scale-1);
+	display: flex;
+	width: fit-content;
+
+	span {
+		margin-left: var(--mc-scale-1);
+		color: var(--red);
+		font-weight: 600;
+		font-size: 1.4rem;
+	}
+}
+
+p {
+	font-weight: 500;
+    color: var(--textColor);
+    font-size: 1.2rem;
+}

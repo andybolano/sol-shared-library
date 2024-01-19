@@ -1,0 +1,17 @@
+.cus-card {
+    background: var(--background);
+    padding: 2.6rem 4rem;
+    width: 100%;
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--primaryColor);
+    }
+
+    &__body {
+        &--title {
+            margin-top: 4rem;
+        }
+    }
+}

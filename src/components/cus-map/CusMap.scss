@@ -1,0 +1,13 @@
+@import url('https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css');
+@import url('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css');
+.cus-map {
+    margin: 0;
+    background-color: var(--lightTextColor);
+    width: 400px;
+    height: 100%;
+
+    p {
+        margin: 2rem;
+        color: var(--background)
+    }
+}
