@@ -8,6 +8,7 @@
 			:value="modelValue"
 			rows="5"
 			cols="50"
+			@input="handleChange"
 		></textarea>
 		<input
 			v-else
@@ -16,7 +17,7 @@
 			:class="{ 'cus-input--icon': icon }"
 			:type="type"
 			:placeholder="placeholder"
-			@change="handleChange"
+			@input="handleChange"
 		/>
 		<i v-if="icon" :class="`icon ${icon}`"></i>
 	</div>

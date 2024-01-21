@@ -19,15 +19,15 @@ export default defineComponent({
 	},
 	setup(props, { emit }: SetupContext) {
 		const items = ref<ItemType[]>([])
-
-		/*watch(
+		watch(
 			() => props.itemsResults,
 			(newItems: ItemType[]) => {
 				items.value = newItems
 			}
-		)*/
+		)
 
 		const onClicked = (item: ItemType) => {
+			items.value = []
 			emit("itemSelected", item)
 		}
 

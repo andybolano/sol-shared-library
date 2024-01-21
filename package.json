@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --port 8081",
-    "build": "vue-cli-service build",
+    "build:dev": "vue-cli-service build --mode development",
+    "build:prod": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@mapbox/mapbox-gl-geocoder": "^5.0.2",
+    "axios": "^1.6.5",
     "mapbox-gl": "^3.1.0",
     "mapbox-gl-geocoder": "^2.0.1",
     "vue": "^3.2.13",
@@ -17,6 +19,7 @@
   "devDependencies": {
     "@types/mapbox__mapbox-gl-geocoder": "^4.7.7",
     "@types/mapbox-gl": "^2.7.19",
+    "@types/node": "^20.11.5",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
@@ -25,6 +28,8 @@
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
     "css-loader": "^6.9.0",
+    "dotenv": "^16.3.1",
+    "dotenv-webpack": "^8.0.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",

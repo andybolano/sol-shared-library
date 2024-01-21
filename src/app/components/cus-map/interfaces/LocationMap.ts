@@ -1,4 +1,4 @@
 export interface LocationMap {
-	lat: string
-	lng: string
+	lat: number
+	lng: number
 }

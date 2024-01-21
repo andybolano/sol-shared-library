@@ -2,7 +2,7 @@ const { ModuleFederationPlugin } = require("webpack").container
 const path = require("path")
 
 module.exports = {
-	publicPath: "http://localhost:8081",
+	publicPath: process.env.VUE_APP_PUBLIC_PATH || "/",
 	devServer: {
 		headers: {
 			"Access-Control-Allow-Origin": "*",
@@ -15,16 +15,20 @@ module.exports = {
 				filename: "remoteEntry.js",
 				exposes: {
 					"./CusButton.vue":
-						"./src/components/cus-button/CusButton.vue",
-					"./CusInput.vue": "./src/components/cus-input/CusInput.vue",
-					"./CusLabel.vue": "./src/components/cus-label/CusLabel.vue",
+						"./src/app/components/cus-button/CusButton.vue",
+					"./CusInput.vue":
+						"./src/app/components/cus-input/CusInput.vue",
+					"./CusLabel.vue":
+						"./src/app/components/cus-label/CusLabel.vue",
 					"./CusHeader.vue":
-						"./src/components/cus-header/CusHeader.vue",
-					"./CusCard.vue": "./src/components/cus-card/CusCard.vue",
-					"./CusMap.vue": "./src/components/cus-map/CusMap.vue",
+						"./src/app/components/cus-header/CusHeader.vue",
+					"./CusCard.vue":
+						"./src/app/components/cus-card/CusCard.vue",
+					"./CusMap.vue": "./src/app/components/cus-map/CusMap.vue",
 					"./CusSearch.vue":
-						"./src/components/cus-search/CusSearch.vue",
+						"./src/app/components/cus-search/CusSearch.vue",
 					"./mainStyle": path.resolve("src/assets/css/main.scss"),
+					"./apiClient": path.resolve("src/app/api-client/api"),
 				},
 				shared: {
 					vue: {

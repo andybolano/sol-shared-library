@@ -1,4 +1,4 @@
-import HomeView from "../views/HomeView.vue"
+import HomeView from "../app/views/HomeView.vue"
 
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
 

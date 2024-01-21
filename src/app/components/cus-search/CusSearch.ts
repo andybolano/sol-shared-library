@@ -10,6 +10,10 @@ export default defineComponent({
 		SearchResults,
 	},
 	props: {
+		id: {
+			type: String,
+			required: true,
+		},
 		label: {
 			type: String,
 			default: "",
@@ -34,7 +38,6 @@ export default defineComponent({
 			type: [String, Number],
 		},
 	},
-
 	setup(prop, { emit }: SetupContext) {
 		const value = ref(prop.modelValue)
 		const handleItemSelected = (item: ItemType) => {
@@ -42,8 +45,15 @@ export default defineComponent({
 			emit("itemSelected", item)
 		}
 
+		const handleChange = (event: any) => {
+			if (event.target) {
+				emit("update:modelValue", event.target.value)
+			}
+		}
+
 		return {
 			handleItemSelected,
+			handleChange,
 			value,
 		}
 	},

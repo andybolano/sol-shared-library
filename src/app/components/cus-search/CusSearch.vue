@@ -1,8 +1,14 @@
 <template>
 	<div class="cus-search">
-		<CusInput :label="label" :placeholder="placeholder" v-model="value" />
+		<CusInput
+			:id="id"
+			:label="label"
+			:placeholder="placeholder"
+			@input="handleChange"
+			v-model="value"
+		/>
 		<SearchResults
-			:textLoading="isLoadingResults"
+			:textLoading="textLoading"
 			:itemsResults="itemsResults"
 			:isLoadingResults="isLoadingResults"
 			@itemSelected="handleItemSelected"
