@@ -1,0 +1,18 @@
+.dynamic-form {
+
+    &__message {
+        font-size: var(--mc-scale-3);
+        color: var(--error-color);
+    }
+
+    &__setting {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        cursor: pointer;
+        padding: 5px 0;
+        color: var(--primaryColor);
+        text-decoration: underline;
+    }
+}

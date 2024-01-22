@@ -1,7 +1,7 @@
 import { defineComponent, onMounted, ref, watch } from "vue"
 import Mapboxgl from "mapbox-gl"
 
-import { LocationMap } from "./interfaces/LocationMap"
+import type { LocationMap } from "./interfaces/LocationMap"
 
 Mapboxgl.accessToken = process.env.VUE_APP_MAPBOX_ACCESS_TOKEN
 

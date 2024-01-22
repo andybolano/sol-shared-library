@@ -5,5 +5,15 @@ import CusHeader from "./cus-header/CusHeader.vue"
 import CusCard from "./cus-card/CusCard.vue"
 import CusMap from "./cus-map/CusMap.vue"
 import CusSearch from "./cus-search/CusSearch.vue"
+import CusLoading from "./cus-loading/CusLoading.vue"
 
-export { CusButton, CusInput, CusLabel, CusHeader, CusCard, CusMap, CusSearch }
+export {
+	CusButton,
+	CusInput,
+	CusLabel,
+	CusHeader,
+	CusCard,
+	CusMap,
+	CusSearch,
+	CusLoading,
+}

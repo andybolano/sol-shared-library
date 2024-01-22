@@ -1,4 +1,4 @@
-import { RequestParams } from "../interfaces/RequestParams"
+import type { RequestParams } from "../interfaces/RequestParams"
 
 export const requestParams: RequestParams = {
 	mapbox: {
@@ -6,7 +6,7 @@ export const requestParams: RequestParams = {
 		access_token: process.env.VUE_APP_MAPBOX_ACCESS_TOKEN || "",
 	},
 	server: {
-		url: process.env.VUE_APP_SERVER_URL || "",
+		url: process.env.VUE_APP_API_SERVER_URL || "",
 		access_token: process.env.VUE_APP_SERVER_ACCESS_TOKEN || "",
 	},
 }

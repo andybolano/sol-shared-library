@@ -1,6 +1,13 @@
 import { createApp } from "vue"
 import App from "./App.vue"
+import Antd from "ant-design-vue"
 import router from "./router"
 import "./assets/css/main.scss"
+import filters from "./app/ui-lib/helpers/filters"
 
-createApp(App).use(router).mount("#app")
+const app = createApp(App)
+app.use(router)
+app.use(Antd)
+app.mount("#app")
+
+app.config.globalProperties.$filters = filters

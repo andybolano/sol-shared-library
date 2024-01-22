@@ -2,7 +2,7 @@
 	<RouterView></RouterView>
 </template>
 <script lang="ts">
-import solventoTheme from "./assets/themes/solvento-theme"
+import solventoTheme from "./app/ui-lib/themes/solvento-theme"
 
 export default {
 	name: "App",

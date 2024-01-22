@@ -11,27 +11,44 @@ module.exports = {
 	configureWebpack: {
 		plugins: [
 			new ModuleFederationPlugin({
-				name: "uiLibrary",
+				name: "sharedLibrary",
 				filename: "remoteEntry.js",
 				exposes: {
 					"./CusButton.vue":
-						"./src/app/components/cus-button/CusButton.vue",
+						"./src/app/ui-lib/ui-components/cus-button/CusButton.vue",
 					"./CusInput.vue":
-						"./src/app/components/cus-input/CusInput.vue",
+						"./src/app/ui-lib/ui-components/cus-input/CusInput.vue",
 					"./CusLabel.vue":
-						"./src/app/components/cus-label/CusLabel.vue",
+						"./src/app/ui-lib/ui-components/cus-label/CusLabel.vue",
 					"./CusHeader.vue":
-						"./src/app/components/cus-header/CusHeader.vue",
+						"./src/app/ui-lib/ui-components/cus-header/CusHeader.vue",
 					"./CusCard.vue":
-						"./src/app/components/cus-card/CusCard.vue",
-					"./CusMap.vue": "./src/app/components/cus-map/CusMap.vue",
+						"./src/app/ui-lib/ui-components/cus-card/CusCard.vue",
+					"./CusMap.vue":
+						"./src/app/ui-lib/ui-components/cus-map/CusMap.vue",
 					"./CusSearch.vue":
-						"./src/app/components/cus-search/CusSearch.vue",
+						"./src/app/ui-lib/ui-components/cus-search/CusSearch.vue",
+					"./CusTable.vue":
+						"./src/app/ui-lib/ui-components/cus-table/CusTable.vue",
+					"./CusLoading.vue":
+						"./src/app/ui-lib/ui-components/cus-loading/CusLoading.vue",
 					"./mainStyle": path.resolve("src/assets/css/main.scss"),
+					"./CusMessage": path.resolve(
+						"./src/app/ui-lib/ui-components/cus-message/CusMessage"
+					),
+					"./useLoading": path.resolve(
+						"./src/app/shared/composables/Loading.ts"
+					),
 					"./apiClient": path.resolve("src/app/api-client/api"),
+					"./filters": path.resolve("src/app/ui-lib/helpers/filters"),
 				},
 				shared: {
+					//TODO investigate for this params
 					vue: {
+						eager: true,
+						singleton: true,
+					},
+					"ant-design-vue": {
 						eager: true,
 						singleton: true,
 					},

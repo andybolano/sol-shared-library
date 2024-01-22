@@ -5,6 +5,7 @@ import { authInterceptor, errorInterceptor } from "./config/interceptors"
 
 type IConfig = AxiosRequestConfig
 
+//TODO share class type https://github.com/jherr/mf-five-mistakes
 class HttpRequest {
 	api: ReturnType<typeof axios.create>
 
@@ -28,6 +29,19 @@ class HttpRequest {
 	): Promise<AxiosResponse<T>> {
 		try {
 			const response = await this.api.post<T>(url, data, conf)
+			return response
+		} catch (error) {
+			return Promise.reject(error)
+		}
+	}
+
+	async patch<T, Y>(
+		url: string,
+		data: Y,
+		conf?: IConfig
+	): Promise<AxiosResponse<T>> {
+		try {
+			const response = await this.api.patch<T>(url, data, conf) //TODO add type Y
 			return response
 		} catch (error) {
 			return Promise.reject(error)

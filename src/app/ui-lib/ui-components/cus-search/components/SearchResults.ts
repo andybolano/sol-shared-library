@@ -1,9 +1,13 @@
 import { SetupContext, defineComponent, ref, watch } from "vue"
-import { ItemType } from "../interfaces/ItemType"
+import type { ItemType } from "../interfaces/ItemType"
 
 export default defineComponent({
 	name: "SearchResults",
 	props: {
+		showList: {
+			type: Boolean,
+			default: false,
+		},
 		isLoadingResults: {
 			type: Boolean,
 			default: false,

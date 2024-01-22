@@ -1,13 +1,15 @@
 <template>
-	<div class="cus-search">
+	<div class="cus-search" v-click-outside="handleClickOutside">
 		<CusInput
 			:id="id"
 			:label="label"
 			:placeholder="placeholder"
+			required
 			@input="handleChange"
 			v-model="value"
 		/>
 		<SearchResults
+			:showList="showList"
 			:textLoading="textLoading"
 			:itemsResults="itemsResults"
 			:isLoadingResults="isLoadingResults"

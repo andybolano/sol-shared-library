@@ -1,4 +1,4 @@
-import { ItemType } from "./../components/cus-search/interfaces/ItemType"
+import type { ItemType } from "../ui-lib/ui-components/cus-search/interfaces/ItemType"
 import { defineComponent } from "vue"
 import {
 	CusButton,
@@ -8,7 +8,9 @@ import {
 	CusCard,
 	CusMap,
 	CusSearch,
-} from "../components"
+	CusLoading,
+} from "../ui-lib/ui-components"
+import { useLoading } from "../shared/composables/Loading"
 
 export default defineComponent({
 	name: "HomeView",
@@ -20,9 +22,18 @@ export default defineComponent({
 		CusCard,
 		CusMap,
 		CusSearch,
+		CusLoading,
 	},
 
 	setup() {
+		const { startLoading, stopLoading } = useLoading()
+		const timeForHideLoading = 2000
+		startLoading()
+
+		setTimeout(() => {
+			stopLoading()
+		}, timeForHideLoading)
+
 		return {
 			itemsResults: [
 				{

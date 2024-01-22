@@ -5,6 +5,7 @@
 		</template>
 	</CusHeader>
 	<div class="container">
+		<CusLoading />
 		<section class="section">
 			<h2>Button Component</h2>
 			<div class="section__elements">

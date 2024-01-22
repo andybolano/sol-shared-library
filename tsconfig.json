@@ -18,6 +18,7 @@
       "webpack-env"
     ],
     "paths": {
+      "@shared/*": ["src/app/shared/*"],
       "@/components/*": ["src/components/*"],
       "@/*": [
         "src/*"
