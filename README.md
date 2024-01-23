@@ -21,5 +21,5 @@ npm run lint
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# sol-uiLibrary
+See project [Shared library](https://sol-shared-library.netlify.app/).
+# sol-shared-library
