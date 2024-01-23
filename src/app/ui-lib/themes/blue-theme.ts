@@ -9,3 +9,14 @@ export default {
 	secondaryColorLight: "rgb(172, 135, 93, 0.1)",
 	secondaryTextColor: "#979797",
 }
+
+export const paletteColors = [
+	"#006BB3",
+	"#00538A",
+	"#0081D6",
+	"#003A61",
+	"#002238",
+	"#003DD6",
+	"#00C4D6",
+	"#0d47a1",
+]
