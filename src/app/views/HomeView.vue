@@ -4,7 +4,7 @@
 			<h1>UI Solvento Library</h1>
 		</template>
 	</CusHeader>
-	<div class="container">
+	<div class="container container--home">
 		<CusLoading />
 		<section class="section">
 			<h2>Button Component</h2>
