@@ -4,6 +4,7 @@
 			:id="id"
 			:label="label"
 			:placeholder="placeholder"
+			:icon="'icon-search'"
 			required
 			@input="handleChange"
 			v-model="value"
