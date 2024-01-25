@@ -1,7 +1,7 @@
 <template>
 	<CusHeader>
 		<template #title>
-			<h1>UI Solvento Library docker</h1>
+			<h1>UI Solvento Library</h1>
 		</template>
 	</CusHeader>
 	<div class="container container--home">
