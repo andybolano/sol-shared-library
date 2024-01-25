@@ -1,4 +1,4 @@
-import { SetupContext, defineComponent, ref, watch } from "vue"
+import { SetupContext, computed, defineComponent, ref, watch } from "vue"
 import type { ItemType } from "../interfaces/ItemType"
 
 export default defineComponent({
@@ -23,6 +23,11 @@ export default defineComponent({
 	},
 	setup(props, { emit }: SetupContext) {
 		const items = ref<ItemType[]>([])
+		const shouldShowList = computed(
+			() =>
+				props.showList &&
+				(!!items.value.length || props.isLoadingResults)
+		)
 		watch(
 			() => props.itemsResults,
 			(newItems: ItemType[]) => {
@@ -38,6 +43,7 @@ export default defineComponent({
 		return {
 			items,
 			onClicked,
+			shouldShowList,
 		}
 	},
 })

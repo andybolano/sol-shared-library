@@ -1,8 +1,5 @@
 <template>
-	<div
-		v-if="showList && (!!items.length || isLoadingResults)"
-		class="search-result"
-	>
+	<div v-if="shouldShowList" class="search-result">
 		<h5 v-if="isLoadingResults" class="flashes">{{ textLoading }}</h5>
 		<ul v-else-if="items.length > 0">
 			<li v-for="item in items" :key="item.id" @click="onClicked(item)">

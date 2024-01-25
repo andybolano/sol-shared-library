@@ -46,8 +46,8 @@ export default defineComponent({
 			type: [String, Number],
 		},
 	},
-	setup(prop, { emit }: SetupContext) {
-		const value = ref(prop.modelValue)
+	setup(props, { emit }: SetupContext) {
+		const value = ref(props.modelValue)
 		const showList = ref(false)
 		const handleItemSelected = (item: ItemType) => {
 			value.value = item.name
@@ -65,14 +65,12 @@ export default defineComponent({
 		}
 
 		watch(
-			() => prop.modelValue,
+			() => props.modelValue,
 			(newValue, oldValue) => {
 				value.value = newValue
-
-				if (oldValue) {
-					showList.value =
-						prop.isLoadingResults || prop.itemsResults.length > 0
-				}
+				showList.value = oldValue
+					? props.isLoadingResults || props.itemsResults.length > 0
+					: false
 			}
 		)
 
