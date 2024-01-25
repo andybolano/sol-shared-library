@@ -2,11 +2,11 @@ import axios, { AxiosRequestConfig, AxiosResponse } from "axios"
 import { requestParams } from "./config/request-params"
 import { createAxiosInstance } from "./config/axios-config"
 import { authInterceptor, errorInterceptor } from "./config/interceptors"
+import { IHttpRequest } from "./interfaces/HttpRequest"
 
 type IConfig = AxiosRequestConfig
 
-//TODO share class type https://github.com/jherr/mf-five-mistakes
-class HttpRequest {
+class HttpRequest implements IHttpRequest {
 	api: ReturnType<typeof axios.create>
 
 	constructor(api: ReturnType<typeof axios.create>) {
@@ -28,7 +28,11 @@ class HttpRequest {
 		conf?: IConfig
 	): Promise<AxiosResponse<T>> {
 		try {
-			const response = await this.api.post<T>(url, data, conf)
+			const response = await this.api.post<Y, AxiosResponse<T>>(
+				url,
+				data,
+				conf
+			)
 			return response
 		} catch (error) {
 			return Promise.reject(error)
@@ -41,7 +45,11 @@ class HttpRequest {
 		conf?: IConfig
 	): Promise<AxiosResponse<T>> {
 		try {
-			const response = await this.api.patch<T>(url, data, conf) //TODO add type Y
+			const response = await this.api.patch<Y, AxiosResponse<T>>(
+				url,
+				data,
+				conf
+			)
 			return response
 		} catch (error) {
 			return Promise.reject(error)

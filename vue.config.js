@@ -47,9 +47,8 @@ module.exports = {
 					),
 				},
 				shared: {
-					//TODO investigate for this params
 					vue: {
-						eager: true,
+						eager: false,
 						singleton: true,
 						requiredVersion: "3.4.14",
 					},
