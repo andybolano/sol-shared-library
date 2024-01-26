@@ -18,8 +18,9 @@
       "webpack-env"
     ],
     "paths": {
-      "@shared/*": ["src/app/shared/*"],
-      "@/components/*": ["src/components/*"],
+      "*": ["types/*"],
+      "@/shared/*": ["src/app/shared/*"],
+      "@/app/*": ["src/app/*"],
       "@/*": [
         "src/*"
       ]
@@ -36,9 +37,15 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/**/*.tsx",
+    "cypress/**/*.ts"
   ],
   "exclude": [
+    "**/*.spec.ts",
     "node_modules"
+  ],
+  "reporter": [
+    "lcov",
+    "text-summary"
   ]
 }

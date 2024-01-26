@@ -4,7 +4,10 @@ import { typeButton } from "./enums/ButtonType"
 export default defineComponent({
 	name: "CusButton",
 	props: {
-		value: String,
+		value: {
+			type: String,
+			required: true,
+		},
 		type: {
 			type: String,
 			default: typeButton.Primary,

@@ -1,5 +1,6 @@
 <template>
 	<Avatar
+		data-testid="cus-avatar"
 		:size="size"
 		shape="square"
 		:style="{
