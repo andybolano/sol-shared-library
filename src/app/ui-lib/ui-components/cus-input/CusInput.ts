@@ -3,6 +3,7 @@ import { InputTypes } from "./enums/InputTypes"
 import { SetupContext, defineComponent } from "vue"
 
 export default defineComponent({
+	extends: CusLabel,
 	name: "CusInput",
 	components: {
 		CusLabel,
@@ -19,16 +20,6 @@ export default defineComponent({
 			type: String,
 			required: false,
 			default: "",
-		},
-		label: {
-			type: String,
-			required: false,
-			default: "",
-		},
-		required: {
-			type: Boolean,
-			required: false,
-			default: false,
 		},
 		id: {
 			type: String,

@@ -3,7 +3,7 @@ import { defineComponent } from "vue"
 export default defineComponent({
 	name: "CusLabel",
 	props: {
-		text: {
+		labelText: {
 			type: String,
 			required: true,
 		},

@@ -1,16 +1,10 @@
-import {
-	SetupContext,
-	computed,
-	defineComponent,
-	nextTick,
-	ref,
-	watch,
-} from "vue"
+import { SetupContext, computed, defineComponent, ref, watch } from "vue"
 import CusInput from "../cus-input/CusInput.vue"
 import type { ItemType } from "./interfaces/ItemType"
 import clickOutside from "@/app/shared/directives/ClickOutSide"
 
 export default defineComponent({
+	extends: CusInput,
 	name: "CusSearch",
 	components: {
 		CusInput,
@@ -19,22 +13,6 @@ export default defineComponent({
 		clickOutside,
 	},
 	props: {
-		id: {
-			type: String,
-			required: true,
-		},
-		label: {
-			type: String,
-			default: "",
-		},
-		required: {
-			type: Boolean,
-			default: false,
-		},
-		placeholder: {
-			type: String,
-			default: "",
-		},
 		textLoading: {
 			type: String,
 			default: "Loading...",

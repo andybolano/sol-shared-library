@@ -1,6 +1,6 @@
 <template>
 	<div class="cus-label">
-		<p :class="type">{{ text }}</p>
+		<p :class="type">{{ labelText }}</p>
 		<span v-if="isRequired">*</span>
 	</div>
 </template>

@@ -1,6 +1,10 @@
 <template>
 	<div>
-		<CusLabel v-if="label" :text="label" :isRequired="required" />
+		<CusLabel
+			v-if="labelText"
+			:labelText="labelText"
+			:isRequired="isRequired"
+		/>
 		<div class="input-container">
 			<textarea
 				v-if="type === 'textarea'"

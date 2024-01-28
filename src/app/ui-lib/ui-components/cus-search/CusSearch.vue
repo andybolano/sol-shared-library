@@ -2,10 +2,10 @@
 	<div class="cus-search" v-click-outside="closeList">
 		<CusInput
 			:id="id"
-			:label="label"
+			:labelText="labelText"
 			:placeholder="placeholder"
 			:icon="'icon-search'"
-			required
+			:isRequired="isRequired"
 			v-model="value"
 		/>
 		<div v-if="showList" class="cus-search__results">

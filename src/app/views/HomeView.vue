@@ -51,11 +51,11 @@
 			<div class="section__elements">
 				<div>
 					<p>Basic Label</p>
-					<CusLabel :text="'Label Example'" />
+					<CusLabel :labelText="'Label Example'" />
 				</div>
 				<div>
 					<p>Label Required</p>
-					<CusLabel :text="'Label Example'" isRequired />
+					<CusLabel :labelText="'Label Example'" isRequired />
 				</div>
 			</div>
 		</section>
