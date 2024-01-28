@@ -3,4 +3,47 @@
     max-width: 280px;
     position: relative;
     overflow: hidden;
+
+    &__results {
+        border: 1px solid #eeeeee;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-radius:  0 0 var(--border-radius) var(--border-radius);
+        background-color: var(--background);
+        position: fixed;
+        z-index: 1000;
+        max-width: 280px;
+        width: 100%;
+        box-shadow: var(--box-shadow);
+    
+        h5 {
+            font-family: var(--font-family);
+            font-size: 1.2rem;
+        }
+    
+        ul {
+            background-color: var(--background);
+            width: 100%;
+            border-radius: var(--border-radius);
+            list-style: none;
+            padding: 0;
+        
+        
+            li {
+                padding: 1rem 2rem;
+                cursor: pointer;
+                font-family: var(--font-family);
+                border-bottom: 1px solid var(--bodyBackground);
+        
+                &:last-child {
+                    border: none;
+                }
+                
+                p {
+                    font-size: 1.4rem;
+                }
+            
+            }
+        }
+    } 
 }
