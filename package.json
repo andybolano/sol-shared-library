@@ -7,8 +7,12 @@
     "build:dev": "vue-cli-service build --mode development",
     "build:prod": "vue-cli-service build --mode production",
     "test": "npx cypress open",
-    "coverage": "npx nyc report --reporter=lcov",
+    "coverage": "npx nyc cypress run",
     "lint": "vue-cli-service lint"
+  },
+  "nyc": {
+    "include": ["cypress/component/*.ts"],
+    "report-dir": ".nyc_output"
   },
   "dependencies": {
     "@mapbox/mapbox-gl-geocoder": "^5.0.2",

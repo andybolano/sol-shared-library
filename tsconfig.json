@@ -13,7 +13,9 @@
     "useDefineForClassFields": true,
     "sourceMap": true,
     "baseUrl": ".",
-    
+    "plugins": [
+      { "transform": "@cypress/code-coverage/ts-loader" }
+    ],
     "types": [
       "webpack-env"
     ],
