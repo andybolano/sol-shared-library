@@ -1,5 +1,5 @@
 import type { ItemType } from "../ui-lib/ui-components/cus-search/interfaces/ItemType"
-import { defineComponent } from "vue"
+import { defineComponent, ref } from "vue"
 import {
 	CusButton,
 	CusInput,
@@ -28,6 +28,7 @@ export default defineComponent({
 	setup() {
 		const { startLoading, stopLoading } = useLoading()
 		const timeForHideLoading = 2000
+		const searchValue = ref("")
 		startLoading()
 
 		setTimeout(() => {
@@ -35,6 +36,7 @@ export default defineComponent({
 		}, timeForHideLoading)
 
 		return {
+			searchValue,
 			itemsResults: [
 				{
 					id: "0",

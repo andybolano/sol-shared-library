@@ -9,6 +9,10 @@ export default defineComponent({
 		CusLabel,
 	},
 	props: {
+		labelText: {
+			type: String,
+			default: "",
+		},
 		modelValue: {
 			type: [String, Number],
 		},
@@ -23,7 +27,7 @@ export default defineComponent({
 		},
 		id: {
 			type: String,
-			required: true,
+			required: false,
 		},
 		icon: {
 			type: String,

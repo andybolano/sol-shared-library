@@ -46,13 +46,14 @@
 			<div class="section__elements">
 				<div>
 					<p>Basic Input</p>
-					<CusInput :placeholder="'Insert name'" />
+					<CusInput :placeholder="'Insert name'" id="input-basic" />
 				</div>
 				<div>
 					<p>Input with Icon</p>
 					<CusInput
 						:placeholder="'Insert name'"
 						:icon="'icon-user'"
+						id="input-with-icon"
 					/>
 				</div>
 			</div>
@@ -105,6 +106,7 @@
 								<CusInput
 									:placeholder="'Insert name'"
 									:icon="'icon-user'"
+									id="input-card"
 								/>
 								<CusButton
 									class="mt-8"
@@ -137,10 +139,12 @@
 			<h2>Search Component</h2>
 			<div class="section__element">
 				<CusSearch
+					:id="'search-element'"
 					:label="'Buscador'"
 					:placeholder="'Type...'"
 					:itemsResults="itemsResults"
 					@itemSelected="handleItemSelected($event)"
+					v-model="searchValue"
 				/>
 			</div>
 		</section>
