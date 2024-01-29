@@ -1,4 +1,4 @@
-import { SetupContext, computed, defineComponent, ref, watch } from "vue"
+import { SetupContext, computed, defineComponent, ref, watchEffect } from "vue"
 import CusInput from "../cus-input/CusInput.vue"
 import type { ItemType } from "./interfaces/ItemType"
 import clickOutside from "@/app/shared/directives/ClickOutSide"
@@ -42,19 +42,19 @@ export default defineComponent({
 
 		const showList = ref(false)
 
-		const handleActiveOption = (option: ItemType) => {
-			closeList()
-			emit("changeOption", option)
-		}
+		watchEffect(() => {
+			showList.value =
+				props.isLoadingResults || props.itemsResults.length > 0
+		})
 
 		const closeList = () => {
 			showList.value = false
 		}
 
-		watch([() => props.isLoadingResults, () => props.itemsResults], () => {
-			showList.value =
-				props.isLoadingResults || props.itemsResults.length > 0
-		})
+		const handleActiveOption = (option: ItemType) => {
+			closeList()
+			emit("changeOption", option)
+		}
 
 		return {
 			closeList,
