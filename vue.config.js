@@ -49,9 +49,9 @@ module.exports = {
 				},
 				shared: {
 					vue: {
-						eager: false,
+						eager: true,
 						singleton: true,
-						requiredVersion: "3.4.14",
+						requiredVersion: "3.2.13",
 					},
 				},
 			}),
