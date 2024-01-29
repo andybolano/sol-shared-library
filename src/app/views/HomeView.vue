@@ -3,6 +3,17 @@
 		<template #title>
 			<h1>UI Solvento Library</h1>
 		</template>
+		<template #options>
+			<a
+				href="https://github.com/andybolano/sol-shared-library"
+				target="_blank"
+			>
+				<img src="../../assets/images/github-icon.png" /> Github
+			</a>
+			<a href="https://storybook-sol-ui-lib.netlify.app/" target="_blank">
+				<img src="../../assets/images/storybook-icon.png" /> StoryBook
+			</a>
+		</template>
 	</CusHeader>
 	<div class="container container--home">
 		<CusLoading />
@@ -87,7 +98,10 @@
 					<CusCard :title="'Title of the card'">
 						<template #body>
 							<div>
-								<CusLabel :text="'Label Example'" isRequired />
+								<CusLabel
+									:labelText="'Label Example'"
+									isRequired
+								/>
 								<CusInput
 									:placeholder="'Insert name'"
 									:icon="'icon-user'"

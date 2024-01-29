@@ -3,6 +3,9 @@ node_modules
 /dist
 /coverage
 /.nyc_output
+/storybook
+/storybook-static
+/instrumend
 
 # local env files
 .env.local

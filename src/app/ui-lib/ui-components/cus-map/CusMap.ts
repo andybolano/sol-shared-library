@@ -3,7 +3,7 @@ import Mapboxgl from "mapbox-gl"
 
 import type { LocationMap } from "./interfaces/LocationMap"
 
-Mapboxgl.accessToken = process.env.VUE_APP_MAPBOX_ACCESS_TOKEN
+Mapboxgl.accessToken = process.env.VUE_APP_MAPBOX_ACCESS_TOKEN || ""
 
 const locationDefault = {
 	lng: -74.063644,

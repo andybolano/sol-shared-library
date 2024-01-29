@@ -37,7 +37,6 @@ export default defineComponent({
 	},
 	setup(props: { name: string; staticColor: boolean }) {
 		const name = ref(props.name)
-
 		const getColor = (): string => {
 			const colors = paletteColors
 			return colors[Math.floor(Math.random() * colors.length)]

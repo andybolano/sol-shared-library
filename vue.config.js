@@ -4,6 +4,7 @@ const path = require("path")
 module.exports = {
 	publicPath: process.env.VUE_APP_PUBLIC_PATH || "/",
 	devServer: {
+		hot: false,
 		headers: {
 			"Access-Control-Allow-Origin": "*",
 		},
@@ -58,5 +59,16 @@ module.exports = {
 		optimization: {
 			splitChunks: false,
 		},
+	},
+
+	chainWebpack: (config) => {
+		config.resolve.extensions.add(".js").add(".vue").add(".json")
+
+		config.module
+			.rule("vue")
+			.test(/\.vue$/)
+			.use("vue-loader")
+			.loader("vue-loader")
+			.end()
 	},
 }
