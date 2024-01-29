@@ -36,6 +36,9 @@ module.exports = {
 					"./CusLoading.vue":
 						"./src/app/ui-lib/ui-components/cus-loading/CusLoading.vue",
 					"./mainStyle": path.resolve("./src/assets/css/main.scss"),
+					"./iconsStyle": path.resolve(
+						"./src/assets/icons/style.css"
+					),
 					"./CusMessage": path.resolve(
 						"./src/app/ui-lib/ui-components/cus-message/CusMessage"
 					),
